@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "no-double-tap-sprint",
+  "version": "${version}",
+  "name": "No Double Tap Sprint",
+  "description": "Removes the feature where double-tapping your forward key sends you forward",
+  "authors": [
+    "sschr15"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/no-double-tap-sprint/icon.png",
+  "environment": "*",
+  "entrypoints": {
+  },
+  "mixins": [
+    "no-double-tap-sprint.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.8",
+    "minecraft": ">=1.18"
+  },
+  "accessWidener": "nodoubletapsprint.accesswidener"
+}
