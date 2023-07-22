@@ -1,9 +1,9 @@
 package sschr15.fabricmods.nodoubletapsprint.client;
 
 public interface DisableDoubleTapAccessor {
-    boolean isDoubleTapDisabled();
+    boolean nodoubletap$isDoubleTapDisabled();
 
-    void setDoubleTapDisabled(boolean doubleTapDisabled);
+    void nodoubletap$setDoubleTapDisabled(boolean doubleTapDisabled);
 
-    boolean isSprintKeyPressed();
+    boolean nodoubletap$isSprintKeyPressed();
 }

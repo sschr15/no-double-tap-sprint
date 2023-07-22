@@ -1,11 +1,12 @@
 package sschr15.fabricmods.nodoubletapsprint.client;
 
-import net.minecraft.client.option.CyclingOption;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.OptionInstance;
 
 public class DoubleTapOption {
-    public static final CyclingOption<Boolean> DOUBLE_TAP_SPRINT = CyclingOption.create(
+    public static final OptionInstance<Boolean> DOUBLE_TAP_SPRINT = OptionInstance.createBoolean(
             "controls.double_tap_sprint",
-            gameOptions -> !((DisableDoubleTapAccessor) gameOptions).isDoubleTapDisabled(),
-            (gameOptions, option, value) -> ((DisableDoubleTapAccessor) gameOptions).setDoubleTapDisabled(!value)
+            ((DisableDoubleTapAccessor) Minecraft.getInstance().options).nodoubletap$isDoubleTapDisabled(),
+            bl -> ((DisableDoubleTapAccessor) Minecraft.getInstance().options).nodoubletap$setDoubleTapDisabled(bl)
     );
 }
