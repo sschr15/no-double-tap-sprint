@@ -20,7 +20,7 @@ public abstract class ClientPlayerEntityMixin extends LivingEntity {
     @Redirect(method = "aiStep", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/player/LocalPlayer;setSprinting(Z)V"))
     private void setSprinting(LocalPlayer player, boolean sprinting) {
         DisableDoubleTapAccessor options = (DisableDoubleTapAccessor) minecraft.options;
-        setSprinting(options.nodoubletap$isDoubleTapDisabled() ? options.nodoubletap$isSprintKeyPressed() : sprinting);
+        setSprinting(options.nodoubletap$isDoubleTapDisabled() ? options.nodoubletap$isSprintKeyPressed() && sprinting : sprinting);
     }
 
     private ClientPlayerEntityMixin() {
